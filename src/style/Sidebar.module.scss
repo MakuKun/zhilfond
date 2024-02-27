@@ -1,0 +1,42 @@
+.sb{
+    padding: 40px 30px;
+    flex: 1 1 auto;
+    border-right: 2px solid rgb(226, 226, 226);
+    overflow: auto;
+}
+.sb_header{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+    & label{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    & input{
+        height: 50px;
+        font-size: 18px;
+        border-radius: 8px;
+        padding: 0 20px;
+        border: 2px solid rgb(226, 226, 226);
+        color: rgb(76, 76, 76);
+    }
+}
+.sb_body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    & p{
+        padding: 0 15px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+.sb_body_users{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: rgb(76, 76, 76);
+}
