@@ -6,12 +6,13 @@ import { useAppDispatch } from './store/hooks'
 import { addUsers } from './store/slice/SidebarSlice'
 
 function App() {
-  const {data, isError, isLoading} = useGetUsersQuery()
+  const {data, isError, isLoading} = useGetUsersQuery('')
   const dispatch = useAppDispatch()
   
-  if (data) {
+  if(data){
     dispatch(addUsers(data))
   }
+  
 
   return (
     <div className={styles.app}>

@@ -1,11 +1,10 @@
 .sb{
     padding: 40px 30px;
-    flex: 1 1 auto;
+    width: 560px;
     border-right: 2px solid rgb(226, 226, 226);
     overflow: auto;
 }
 .sb_header{
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -27,14 +26,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    & p{
-        padding: 0 15px;
-        font-size: 24px;
+    & p:first-child{
         font-weight: 600;
+        font-size: 24px;
     }
 }
 .sb_body_users{
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
     gap: 30px;

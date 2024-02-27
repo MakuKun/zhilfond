@@ -4,11 +4,24 @@ import { IUser } from "../../type/IUser";
 interface UserState{
     users: IUser[]
     active: boolean
+    card: {
+        name: string
+        email: string
+        phone: string
+        img: string
+    }
+    
 }
 
 const initialState: UserState = {
     users: [],
-    active: false
+    active: false,
+    card: {
+        email: '',
+        name: '',
+        phone: '',
+        img: ''
+    }
 }
 
 export const  userSlice = createSlice({
@@ -18,12 +31,18 @@ export const  userSlice = createSlice({
         addUsers(state, action){
             state.users = [...action.payload]
         },
-        clearUsers(state){
-            state.users
+        toggleItem(state){
+            state.active = !state.active
+        },
+        showCard(state, action){
+            state.card.name = action.payload.name
+            state.card.email = action.payload.email
+            state.card.phone = action.payload.phone
+            state.card.img = action.payload.img
         }
     }
 
 })
 
 export default userSlice.reducer
-export const {addUsers, clearUsers} = userSlice.actions
+export const {addUsers, showCard, toggleItem} = userSlice.actions
